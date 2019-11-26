@@ -5,4 +5,5 @@
     <color name="colorAccent">#D81B60</color>
     <color name="theme_color">#323232</color>
     <color name="status_bar">#4c4a48 </color>
+    <color name="white">#ffffff </color>
 </resources>

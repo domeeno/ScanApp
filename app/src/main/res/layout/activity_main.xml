@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-    <!--    <TextView-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:text="Dominic!"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintLeft_toLeftOf="parent"-->
-    <!--        app:layout_constraintRight_toRightOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="parent" />-->
 
     <ImageView
         android:id="@+id/formBack"
@@ -24,12 +14,11 @@
         android:contentDescription="@string/this_is_the_background_image_of_the_restaurant" />
 
     <ImageView
-        android:id="@+id/formLogo"
+        android:id="@+id/logo2"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:src="@drawable/ic_logo1"
         android:contentDescription="@string/this_is_the_logo_of_the_restaurant"/>
-
 
     <ImageView
         android:id="@+id/LowBar"
@@ -37,9 +26,8 @@
         android:layout_height="80dp"
         android:layout_alignTop="@+id/scanBtn"
         android:layout_alignParentBottom="true"
-        android:layout_gravity="center_horizontal|bottom"
         android:layout_marginTop="55dp"
-        android:contentDescription="@string/this_is_the_bar_with_the_circle_where_the_scan_button_will_be"
+        android:contentDescription="@string/low_bar"
         android:scaleY="2"
         android:src="@drawable/low_bar" />
 

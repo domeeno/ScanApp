@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main2Activity">
+    tools:context=".Main3Activity">
 
     <ImageView
-        android:id="@+id/formBack"
+        android:id="@+id/def_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:src="@drawable/def_background"
-        android:contentDescription="@string/background_image_of_the_restaurant_might_delete" />
+        android:contentDescription="@string/def_background" />
 
     <ImageView
         android:id="@+id/logo2"
@@ -26,20 +27,24 @@
 
 
 
-    <ImageView
-        android:id="@+id/temorarymenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/temporary_icons" />
-
     <Button
-        android:id="@+id/see_order_btn"
+        android:id="@+id/make_order"
         android:layout_width="150dp"
         android:layout_height="75dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="40dp"
         android:background="@drawable/roundbutton"
-        android:text="@string/see_order" />
+        android:text="@string/make_order" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="361dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="339dp"
+        android:text="@string/text_view"
+        android:textColor="@color/white" />
 
 </RelativeLayout>
