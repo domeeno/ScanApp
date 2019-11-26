@@ -1,13 +1,11 @@
 <resources>
     <string name="app_name">Scan App</string>
     <string name="scan">Scan</string>
-    <string name="this_is_the_temporary_scan_button">This is the temporary scan button</string>
+    <string name="scan_button">Scan button</string>
     <string name="low_bar">Grey Bottom Bar</string>
-    <string name="this_is_the_logo_of_the_restaurant">This is the logo of the restaurant</string>
-    <string name="this_is_the_background_image_of_the_restaurant">This is the background Image of the Restaurant</string>
-    <string name="logo_of_the_scanned_restaurant_qr">Logo of the scanned restaurant QR</string>
-    <string name="background_image_of_the_restaurant_might_delete">Background Image of the restaurant, might delete</string>
-    <string name="image_for_the_scan_btn">Image for the scan Btn</string>
+    <string name="desc_logo">This is the logo of the restaurant</string>
+    <string name="def_back">Default background</string>
+    <string name="img_scan">Image for the scan Btn</string>
     <string name="see_order">See Order</string>
     <string name="make_order">Make Order</string>
     <string name="def_background">Default Background</string>

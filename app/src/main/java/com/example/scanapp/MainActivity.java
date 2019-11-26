@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button scanButton = findViewById(R.id.scanBtn);
+        Button scanButton = findViewById(R.id.scan_btn);
         scanButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
         public void openMenu() {
             Intent intent = new Intent(this, Main2Activity.class);
             startActivity(intent);
