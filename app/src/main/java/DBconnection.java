@@ -9,12 +9,12 @@ import java.sql.SQLException;
 
 public class DBconnection {
 
-    private static String User_name = "";
-    private static String User_pass = "";
+    private static String User_name = "Domo";
+    private static String User_pass = "1234";
     private static String Db_name = "Restaurant";
-    private Context mcontext;
+    static Context mcontext;
     private static Connection Conn = null;
-    private static String Server_ip = "192.168.5.14:1433;";
+    private static String Server_ip = "192.168.5.14:1433";
 
     public static Connection Getconnection() {
 
