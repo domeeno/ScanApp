@@ -66,4 +66,6 @@
         android:src="@drawable/scanbutton"
         android:contentDescription="@string/img_scan" />
 
+
+
 </RelativeLayout>

@@ -10,4 +10,5 @@
     <string name="make_order">Make Order</string>
     <string name="def_background">Default Background</string>
     <string name="text_view">//TODO</string>
+    <string name="something">// To do Database Columns in the future</string>
 </resources>
