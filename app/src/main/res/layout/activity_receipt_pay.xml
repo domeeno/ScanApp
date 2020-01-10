@@ -24,6 +24,7 @@
 <!--        android:contentDescription="@string/desc_logo"-->
 <!--        android:src="@drawable/logo2" />-->
 
+
     <Button
         android:id="@+id/make_order"
         android:layout_width="150dp"

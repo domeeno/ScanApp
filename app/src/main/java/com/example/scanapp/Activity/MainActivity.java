@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.scanapp.Connection.DBConnection;
 import com.example.scanapp.R;
+import com.example.scanapp.Functional.Scanner;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.PermissionToken;
 import com.karumi.dexter.listener.PermissionDeniedResponse;
@@ -31,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         Dexter.withActivity(this).withPermission(Manifest.permission.CAMERA).withListener(new PermissionListener() {
             @Override

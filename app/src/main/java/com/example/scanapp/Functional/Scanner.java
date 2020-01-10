@@ -1,17 +1,18 @@
-package com.example.scanapp.Activity;
+package com.example.scanapp.Functional;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
 
-import com.example.scanapp.R;
+import com.example.scanapp.Connection.DBConnection;
 import com.google.zxing.Result;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
-public class Scanner extends AppCompatActivity implements ZXingScannerView.ResultHandler {
+import static com.example.scanapp.Activity.MainActivity.scanResult;
 
+public class Scanner extends AppCompatActivity implements ZXingScannerView.ResultHandler {
 
     ZXingScannerView ScannerView;
     @Override
@@ -23,8 +24,17 @@ public class Scanner extends AppCompatActivity implements ZXingScannerView.Resul
 
     @Override
     public void handleResult(Result result) {
-        MainActivity.scanResult = result.getText();
-        Log.i("testResults", MainActivity.scanResult);
+        scanResult = result.getText();
+
+        //TODO add if statement that will load DB accordingly to some characters assigned to DB
+        //temporary function bellow
+        //add security measures, maybe create a database with only the restaurant names.
+
+        DBConnection restaurant = new DBConnection("sql5050.site4now.net", "DB_A512F2_restaurant", "DB_A512F2_restaurant_admin",
+                "dominic1234");
+        restaurant.establishConnection();
+        
+        Log.i("testResults", scanResult);
 
         super.onBackPressed();
     }
