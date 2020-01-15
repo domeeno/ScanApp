@@ -53,6 +53,7 @@ public class DBConnection {
         } catch (Exception e) {
             Log.e("ERRO", e.getMessage());
         }
+
         return conn;
     }
 

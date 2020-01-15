@@ -5,13 +5,6 @@
     android:background="@color/groupListColor"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/groupImage"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
     <TextView
         android:id="@+id/groupText"
         android:textSize="24sp"

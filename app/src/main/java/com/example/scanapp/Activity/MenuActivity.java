@@ -11,11 +11,11 @@ import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 
 import com.example.scanapp.Connection.DBConnection;
-import com.example.scanapp.Functional.ExecuteQuery;
-import com.example.scanapp.Functional.GroupItems;
+import com.example.scanapp.Functional.FetchDataQuery;
 import com.example.scanapp.R;
 import com.example.scanapp.Visual.ExpandedListAdapter;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -25,9 +25,8 @@ public class MenuActivity extends AppCompatActivity {
 
     ExpandableListView expandableListView;
 
-    ArrayList<GroupItems> dishCategory;
-    ArrayList<String> tempDishCategory;
-    HashMap<String, List<String>> dish;
+    ArrayList<String> dishCategory = new ArrayList<String>();
+    HashMap<String, List<String>> dish = new HashMap<>();
     ExpandableListAdapter listAdapter;
     String query = "Select CategoryName from DishCategories";
 
@@ -36,13 +35,10 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-
-        ExecuteQuery dishCathegoryQuery = new ExecuteQuery(dishCategory, query, DBConnection.connect);
-
         expandableListView = findViewById(R.id.expandableListView);
         fillExpandableList();
 
-        listAdapter = new ExpandedListAdapter(this, tempDishCategory, dish);
+        listAdapter = new ExpandedListAdapter(this, dishCategory, dish);
 
         expandableListView.setAdapter(listAdapter);
 
@@ -62,22 +58,14 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     public void fillExpandableList(){
-        tempDishCategory = new ArrayList<>();
+        dishCategory = new ArrayList<>();
         dish = new HashMap<>();
 
-        tempDishCategory.add("Pizza");
-        tempDishCategory.add("Tea");
+        try {
+            FetchDataQuery dishCathegoryQuery = new FetchDataQuery(dishCategory, dish, query, DBConnection.connect);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
-        List<String> pizza = new ArrayList<>();
-        List<String> tea = new ArrayList<>();
-
-        pizza.add("Peperoni");
-        pizza.add("Neapolitana");
-
-        tea.add("Ceai Bergamot");
-        tea.add("Ceai Verde");
-
-        dish.put(tempDishCategory.get(0), pizza);
-        dish.put(tempDishCategory.get(1), tea);
     }
 }
