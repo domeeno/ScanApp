@@ -7,20 +7,20 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
+import com.example.scanapp.Functional.GroupItems;
 import com.example.scanapp.R;
 
-import org.w3c.dom.Text;
-
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 public class ExpandedListAdapter extends BaseExpandableListAdapter {
 
-    Context context;
-    List<String> dishCategory;
-    Map<String, List<String>> dish;
+    private Context context;
+    private ArrayList<String> dishCategory;
+    private Map<String, List<String>> dish;
 
-    public ExpandedListAdapter(Context context, List<String> dishCategory, Map<String, List<String>> dish) {
+    public ExpandedListAdapter(Context context, ArrayList<String> dishCategory, Map<String, List<String>> dish) {
         this.context = context;
         this.dishCategory = dishCategory;
         this.dish = dish;

@@ -26,9 +26,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        DBConnection restaurant = new DBConnection("sql5050.site4now.net", "DB_A512F2_restaurant", "DB_A512F2_restaurant_admin",
-                "dominic1234");
-        restaurant.establishConnection();
+//        DBConnection restaurant = new DBConnection("sql5050.site4now.net", "DB_A512F2_restaurant", "DB_A512F2_restaurant_admin",
+//                "dominic1234");
+//        restaurant.establishConnection();
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);

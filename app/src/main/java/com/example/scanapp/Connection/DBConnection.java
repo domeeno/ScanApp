@@ -11,7 +11,7 @@ import java.sql.SQLException;
 public class DBConnection {
 
     private String ip, db, un, password;
-    Connection connect;
+    static public Connection connect;
 
     public DBConnection(String ip, String db, String un, String password){
         this.ip = ip;

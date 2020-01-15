@@ -21,4 +21,15 @@
         android:layout_height="wrap_content"
         android:layout_weight="1" />
 
+    <TextView
+        android:id="@+id/price"
+        android:textSize="24sp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+
+
 </LinearLayout>
