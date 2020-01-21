@@ -15,7 +15,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Functional.Scanner" />
+        <activity android:name=".Activity.PaidActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".Activity.DishInformationActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".Functional.Scanner" android:screenOrientation="portrait"/>
         <activity
             android:name=".Activity.ReceiptActivity"
             android:screenOrientation="portrait" />

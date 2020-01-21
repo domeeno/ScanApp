@@ -5,28 +5,11 @@
     android:layout_height="match_parent"
     tools:context=".Activity.MainActivity">
 
-<!--    <ImageView-->
-<!--        android:id="@+id/form_back"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:scaleType="centerCrop"-->
-<!--        android:src="@drawable/background"-->
-<!--        android:contentDescription="@string/def_back" />-->
-
-<!--    <ImageView-->
-<!--        android:id="@+id/logo_2"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="300dp"-->
-<!--        android:src="@drawable/ic_logo1"-->
-<!--        android:contentDescription="@string/desc_logo"/>-->
-
-    <ImageView
-        android:id="@+id/form_back"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/def_background"
-        android:contentDescription="@string/def_back" />
+        android:layout_alignParentTop="true"
+        android:layout_height="match_parent" />
 
     <ImageView
         android:id="@+id/low_bar"

@@ -15,13 +15,35 @@
         android:scaleType="centerCrop"
         android:src="@drawable/def_background" />
 
+    <Button
+        android:id="@+id/need_help"
+        android:layout_width="120dp"
+        android:layout_height="64dp"
+        android:layout_alignBottom="@+id/logo"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="28dp"
+        android:layout_toEndOf="@+id/logo"
+        android:background="@color/f"
+        android:text="Call Waiter" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="159dp"
+        android:layout_height="133dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/logo2" />
+
     <ExpandableListView
         android:id="@+id/expandableListView"
-        android:layout_width="400dp"
-        android:layout_height="450dp"
+        android:layout_width="match_parent"
+        android:layout_height="430dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="139dp" />
+        android:layout_marginTop="192dp" />
 
     <Button
         android:id="@+id/see_order_btn"

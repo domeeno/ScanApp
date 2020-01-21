@@ -1,6 +1,9 @@
 package com.example.scanapp.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
 import android.Manifest;
 import android.content.Intent;
@@ -10,9 +13,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.scanapp.Connection.DBConnection;
 import com.example.scanapp.R;
 import com.example.scanapp.Functional.Scanner;
+import com.example.scanapp.Visual.MyPagerAdapter;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.PermissionToken;
 import com.karumi.dexter.listener.PermissionDeniedResponse;
@@ -20,18 +23,22 @@ import com.karumi.dexter.listener.PermissionGrantedResponse;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.single.PermissionListener;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     public static String scanResult;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-//        DBConnection restaurant = new DBConnection("sql5050.site4now.net", "DB_A512F2_restaurant", "DB_A512F2_restaurant_admin",
-//                "dominic1234");
-//        restaurant.establishConnection();
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ViewPager viewPager = findViewById(R.id.view_pager);
+        MyPagerAdapter myPagerAdapter = new MyPagerAdapter(this);
+        viewPager.setAdapter(myPagerAdapter);
+
 
         Dexter.withActivity(this).withPermission(Manifest.permission.CAMERA).withListener(new PermissionListener() {
             @Override
@@ -41,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onPermissionDenied(PermissionDeniedResponse response) {
-                Toast.makeText(MainActivity.this, "Camera is needed to scan the QR", Toast.LENGTH_SHORT);
+                Toast.makeText(MainActivity.this, "Camera is needed to scan the QR", Toast.LENGTH_SHORT).show();
             }
 
             @Override

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.PaidActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:textColor="@color/black"
+        android:layout_width="250dp"
+        android:textSize="18sp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="The Payment is confirmed, your food will soon be ready!" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-241dp"
+        android:gravity="center"
+        android:text="ScanApp"
+        android:textSize="12sp" />
+</RelativeLayout>
