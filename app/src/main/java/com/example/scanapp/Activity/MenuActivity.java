@@ -1,25 +1,21 @@
 package com.example.scanapp.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
-
 import com.example.scanapp.Connection.DBConnection;
 import com.example.scanapp.Functional.Category;
 import com.example.scanapp.Functional.Dish;
 import com.example.scanapp.Functional.FetchData;
 import com.example.scanapp.R;
 import com.example.scanapp.Visual.ExpandedListAdapter;
-
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -51,9 +47,9 @@ public class MenuActivity extends AppCompatActivity {
         expandableListView.setAdapter(listAdapter);
 
 
-        Button scanButton = findViewById(R.id.see_order_btn);
+        Button seeOrderButton = findViewById(R.id.see_order_btn);
         final Context context = getApplicationContext();
-        scanButton.setOnClickListener(new View.OnClickListener() {
+        seeOrderButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(orders.size() != 0){

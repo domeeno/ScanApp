@@ -1,7 +1,6 @@
 package com.example.scanapp.Visual;
 
 import android.content.Context;
-
 import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -12,13 +11,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.example.scanapp.Activity.DishInformationActivity;
-import com.example.scanapp.Activity.MenuActivity;
 import com.example.scanapp.Functional.Category;
 import com.example.scanapp.Functional.Dish;
 import com.example.scanapp.R;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -133,14 +129,14 @@ public class ExpandedListAdapter extends BaseExpandableListAdapter {
 
         TextView txtElement = convertView.findViewById(R.id.listText);
         TextView txtElement2 = convertView.findViewById(R.id.listPrice);
- //       ImageView imageView = convertView.findViewById(R.id.listImage);
+        txtElement.setText(dish.getDishName());
+        txtElement2.setText(dish.getDishPrice());
 
         Button plus = convertView.findViewById(R.id.addButton);
         Button minus = convertView.findViewById(R.id.removeButton);
         Button info = convertView.findViewById(R.id.show_dish_info);
-//
-        txtElement.setText(dish.getDishName());
-        txtElement2.setText(dish.getDishPrice());
+
+
 
 //        byte[] decodedString = Base64.decode(dish.getDishImage(), Base64.DEFAULT);
 //        imageView.setImageBitmap(BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length));

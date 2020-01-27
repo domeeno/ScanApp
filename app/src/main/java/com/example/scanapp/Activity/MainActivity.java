@@ -1,10 +1,7 @@
 package com.example.scanapp.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
-
 import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,7 +9,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-
 import com.example.scanapp.R;
 import com.example.scanapp.Functional.Scanner;
 import com.example.scanapp.Visual.MyPagerAdapter;
@@ -22,8 +18,6 @@ import com.karumi.dexter.listener.PermissionDeniedResponse;
 import com.karumi.dexter.listener.PermissionGrantedResponse;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.single.PermissionListener;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -57,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }).check();
 
-
         //Button to the next page
         Button scanButton = findViewById(R.id.scan_btn);
         scanButton.setOnClickListener(new View.OnClickListener() {
@@ -67,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
                 Log.i("ActivityChange", "Switch to Scanner activity was successful");
             }
         });
-
     }
 
     public void openScanner() {

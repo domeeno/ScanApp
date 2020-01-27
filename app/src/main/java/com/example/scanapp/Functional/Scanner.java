@@ -1,20 +1,15 @@
 package com.example.scanapp.Functional;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.scanapp.Activity.MenuActivity;
-import com.example.scanapp.Activity.ReceiptActivity;
 import com.example.scanapp.Connection.DBConnection;
 import com.google.zxing.Result;
-
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 

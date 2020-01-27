@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity.PaidActivity">
-
-
+    
     <TextView
         android:id="@+id/textView"
         android:textColor="@color/black"
@@ -27,4 +26,6 @@
         android:gravity="center"
         android:text="ScanApp"
         android:textSize="12sp" />
+
+
 </RelativeLayout>

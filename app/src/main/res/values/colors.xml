@@ -6,6 +6,7 @@
     <color name="themeColor">#323232</color>
     <color name="statusBar">#A8A8A8A8</color>
     <color name="white">#ffffff </color>
+    <color name="h">#EEEEEE</color>
     <color name="black">#000000</color>
     <color name="c">#C4E7E7E7</color>
     <color name="f">#efefef</color>

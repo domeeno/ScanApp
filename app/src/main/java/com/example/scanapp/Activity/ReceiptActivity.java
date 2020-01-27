@@ -1,30 +1,16 @@
 package com.example.scanapp.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.scanapp.Functional.Dish;
 import com.example.scanapp.R;
 import com.example.scanapp.Visual.CustomAdapter;
-
-import org.w3c.dom.Text;
-
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
-
-import static com.example.scanapp.Connection.DBConnection.connect;
 
 public class ReceiptActivity extends AppCompatActivity {
 
